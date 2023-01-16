@@ -5,8 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
 </head>
 <body>
-    
+    <div class="container">
+        <form class="formulario" id="login">
+            <h1 class="frm_titulo">Log In</h1>
+            <div class="frm_mng frm_mng_erro"></div>
+                <div class="frm_input_user">
+                    <input type="text" class="frm_input" id="utilizador_1" autofocus placeholder="Utilizador ou e-mail">
+                    <small class="frm_input_mng_erro"></small>
+                </div>
+            <div class="frm_input_user">
+                <input type="password" class="frm_input" id="password_1" autofocus placeholder="Palavra-passe">
+                <small class="frm_input_mng_erro"></small>
+            </div>
+            <button href="homepage.html" class="button" id="button" type="submit">Continuar</button>
+            <p class="frm_txt">
+                <a href="#" class="frm_link" id="criar_conta">Não tens conta? Cria conta</a>
+            </p>
+        </form>
+        <form class="formulario frm_escondido" id="Criarconta">
+            <h1 class="frm_titulo">Crie conta</h1>
+            <div class="frm_mng frm_mng_erro">
+                
+            </div>
+            <div class="frm_input_user">
+                <input type="text" id="utilizador_2" class="frm_input" autofocus placeholder="Nome de utilizador">
+                <small class="frm_input_mng_erro"></small>
+            </div>
+            <div class="frm_input_user ">
+                <input type="text" class="frm_input" id="e-mail" autofocus placeholder="E-mail">
+                <small class="frm_input_mng_erro"></small>
+            </div>
+            <div class="frm_input_user">
+                <input type="password" class="frm_input" id="password_2" autofocus placeholder="Palavra-passe">
+                <small class="frm_input_mng_erro"></small>
+            </div>
+            <div class="frm_input_user">
+                <input type="password" class="frm_input" id="conpassword" autofocus placeholder="Confirmação da Palavra-passe">
+                <small class="frm_input_mng_erro"></small>
+            </div>
+            <button class="button_2" id="button_2" type="submit">Continuar</button>
+            <p class="frm_txt">
+                <a href=".\" class="frm_link" id="link_entrar">Já tens conta? Entra com ela</a>
+            </p>
+        </form>
+    </div>
 </body>
+<script src="signup.js"></script>
 </html>
