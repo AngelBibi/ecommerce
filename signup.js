@@ -61,7 +61,7 @@ function check_btn(){
 }
 
 function next_page() {
-    window.open('homepage.html');
+    window.open('index.html');
 }
 
 function check_inputs(){
