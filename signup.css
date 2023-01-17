@@ -13,42 +13,47 @@ body{
     width:400px;
     max-width: 400px;
     margin: 18px;
-    padding: 32px;
+    padding: 5px;
     box-shadow: 0 0 40px black;
     border-radius: 4px;
-    background-color: white;
+    background-color: #B76E79;
 }
 
-.frm_titulo{
+.titulo{
     margin-bottom: 35px;
     text-align: center;
 }
 
 .container,
-.frm_input,
-.button,
-.button_2{
+.input,
+.btn_con,
+.btn_con2{
     font: 18px 'Candara',sans-serif;
-}
-
-.frm_escondido{
-    display:none;
-}
-
-.frm_mng{
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 .frm_mng_sucesso{
     color: rgb(73, 231, 41);
 }
 
-.frm_mng_erro{
+.mngErroUser{
     color: red;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.small {
+.mngErroEmail{
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mngErroPassword{
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.p {
 	color: #e74c3c;
 	position: absolute;
 	bottom: 0;
@@ -56,15 +61,12 @@ body{
 	visibility: visible;
 }
 
-.frm_input_user_erro small {
-	visibility: visible;
-}
 
-.frm_input{
+.formulario{
     margin-bottom: 15px;
 }
 
-.frm_input{
+.formulario{
     display: block;
     width: 100%;
     padding: 8px;
@@ -73,27 +75,25 @@ body{
     border: 1px solid #dddddd;
     outline:none;
     background: #eeeeee;
-    transition: background 0.5s, border-color 0.5s;
 }
 
-.frm_input:focus{
+.formulario:focus{
     border-color: #B76E79;
     background: white;
 }
 
-.frm_input_erro{
-    color: red;
-    border-color: red;
+.input{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #B76E79;
+    outline:none;
+    background: #eeeeee;
 }
 
-.frm_input_mng_erro{
-    margin-top:8px;
-    font-size: 13px;
-    color: red;
-}
-
-.button,
-.button_2{
+.btn_con{
     width: 100%;
     padding: 20px 35px;
     font-weight: bold;
@@ -106,19 +106,32 @@ body{
     background: #B76E79;
 }
 
-.button:hover{
+.btn_con2{
+    width: 100%;
+    padding: 20px 35px;
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    background: #B76E79;
+}
+
+.btn_con:hover{
     background: #E0BFB8;
 }
 
-.button:active{
+.btn_con:active{
     transform: scale(0.95);
 }
 
-.button_2:hover{
+.btn_con2:hover{
     background: #E0BFB8;
 }
 
-.button_2:active{
+.btn_con2:active{
     transform: scale(0.95);
 }
 
@@ -126,12 +139,12 @@ body{
     text-align: center;
 }
 
-.frm_link{
+.link{
     color: #B76E79;
     text-decoration: none;
     cursor: pointer;
 }
 
-.frm_link:hover{
+.link:hover{
     text-decoration: underline;
 }

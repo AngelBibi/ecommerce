@@ -1,101 +1,82 @@
-function mensagem_formulario(frm_ele, mensagem){
-    const mng=frm_ele.querySelector("frm_mng");
-    mng.textContent= mensagem;
-    mng.classList.remove("frm_mng_sucesso", "frm_mng_erro");
-    mng.classList.add('frm_mng_$(type)');
-}
-
-document.addEventListener("DOMContentLoaded",()=>{
-    const logfrm=document.querySelector("#login");
-    const criarcontafrm=document.querySelector("#Criarconta");
-    document.querySelector("#criar_conta").addEventListener("click", e=>{
-        e.preventDefault();
-        logfrm.classList.add("frm_escondido");
-        criarcontafrm.classList.remove("frm_escondido");
-    });
-    document.querySelector("#link_entrar").addEventListener("click", e=>{
-        e.preventDefault();
-        logfrm.classList.remove("frm_escondido");
-        criarcontafrm.classList.add("frm_escondido");
-    });
-
-});
-
 const formulario=document.getElementById('formulario');
-const user_input=document.getElementById('utilizador_2');
-const email=document.getElementById('e-mail');
-const password_input=document.getElementById('password_2');
-const con_password=document.getElementById('conpassword');
-const user=document.getElementById('utilizador_1');
-const password=document.getElementById('password_1');
-var btn = document.getElementById("button_2");
-document.getElementById("button").addEventListener("click", next_page);
 
-btn.addEventListener("submit", (e)=>{
+const user2=document.getElementById('utilizador2');
+const email=document.getElementById('email');
+const password2=document.getElementById('password2');
+const conpassword=document.getElementById('conpassword');
+
+const user=document.getElementById('utilizador');
+const password=document.getElementById('password');
+
+const btn_con2 = document.getElementById("btn_con2");
+const btn_con = document.getElementById("btn_con");
+
+let users=[];
+let emails = []
+let passwords=[];
+let userlog = 
+
+btn_con2.addEventListener("click", (e)=>{
     e.preventDefault();
     check_inputs();
 });
-document.getElementById("button").addEventListener("click", check_btn);
+
+btn_con.addEventListener("click", (e)=>{
+    e.preventDefault();
+    check_btn();
+});
+
 
 function check_btn(){
-    const userValue= user.value.trim();
-    const passwordValue= password.value.trim();
-    const user_inputValue= user_input.value.trim();
-    const password_inputValue= password_input.value.trim();
+    const userVal= user.value;
+    const passwordVal= password.value;
 
-    if (userValue=== ''){
+    if (userVal=== ''){
         alert("O utilizador não pode estar em branco");
-    }else if( userValue!== user_inputValue) {
+    }else if( users.includes(userVal)==false) {
 		alert ("O nome de utilizador não esta valido");
-    }else{
-        setSucessfor(user);
-    }
-    if(passwordValue === '') {
+    }else if(passwordVal === '') {
 		alert("A palavrapasse não pode estar em branco");
-	}else if( passwordValue!== password_inputValue) {
+	}else if( passwords.includes(passwordVal)==false) {
 		alert ("Palavra-passe incorreta");
     } else {
-		setSuccessFor(password);
+        alert('O Log In foi realizado com sucesso')
+		next_page()
 	}
-    
 }
 
 function next_page() {
     window.open('index.html');
 }
 
-function check_inputs(){
-    const user_inputValue= user_input.value.trim();
-    const emailValue= email.value.trim();
-    const password_inputValue= password_input.value.trim();
-    const con_passwordValue= con_password.value.trim();
+function check_inputs(users, emails){
+    const userVal= user2.value;
+    const emailVal= email.value;
+    const passwordVal= password2.value;
+    const conpasswordVal= conpassword.value;
 
-    if (user_inputValue=== ''){
+    if (userVal=== ''){
         alert("O utilizador não pode estar em branco");
-    }else{
-        setSucessfor(user_input);
-    }
-    if(emailValue === '') {
+    }else if(users.includes(userVal)!=false){
+        alert('Este nome de utilizador já esta a ser usado')
+    }else if(emailVal === '') {
 		alert("Email não pode estar em branco");
-	} else {
-		setSuccessFor(email);
-	}
-	
-	if(password_inputValue === '') {
+	} else if(emails.includes(emailVal)!=false){
+		alert('Este email ja esta a ser usado por outro utilizador');
+	} else if(passwordVal === '') {
 		alert("Password não pode estar em branco");
-	} else {
-		setSuccessFor(password);
-	}
-	
-	if(con_passwordValue === '') {
+	} else if(conpasswordVal === '') {
 		alert ("Confirmação da password não pode estar em branco");
-	} else if(password_inputValue !== con_passwordValue) {
+	} else if(passwordVal !== conpasswordVal) {
 		alert ("As passwords não estão iguais");
     }else{
-		setSuccessFor(con_password);
+		setSuccessFor(userVal, emailVal, passwordVal);
 	}
+
 }
-function setSuccessFor(input) {
-	const formControl = input.parentElement;
-	formControl.className = 'frm_input_user success';
+function setSuccessFor(userVal, emailVal, passwordVal, users, emails, passwords) {
+	users.push(userVal)
+    emails.push(emailVal)
+    passwords.push(passwordVal)
+    next_page()
 }
