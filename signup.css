@@ -36,18 +36,21 @@ body{
 }
 
 .mngErroUser{
+    display: hidden;
     color: red;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .mngErroEmail{
+    display: hidden;
     color: red;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .mngErroPassword{
+    display: hidden;
     color: red;
     text-align: center;
     margin-bottom: 20px;

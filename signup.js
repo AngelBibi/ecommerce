@@ -14,7 +14,6 @@ const btn_con = document.getElementById("btn_con");
 let users=[];
 let emails = []
 let passwords=[];
-let userlog = 
 
 btn_con2.addEventListener("click", (e)=>{
     e.preventDefault();
@@ -33,13 +32,9 @@ function check_btn(){
 
     if (userVal=== ''){
         alert("O utilizador não pode estar em branco");
-    }else if( users.includes(userVal)==false) {
-		alert ("O nome de utilizador não esta valido");
     }else if(passwordVal === '') {
 		alert("A palavrapasse não pode estar em branco");
-	}else if( passwords.includes(passwordVal)==false) {
-		alert ("Palavra-passe incorreta");
-    } else {
+	} else {
         alert('O Log In foi realizado com sucesso')
 		next_page()
 	}
@@ -57,12 +52,8 @@ function check_inputs(users, emails){
 
     if (userVal=== ''){
         alert("O utilizador não pode estar em branco");
-    }else if(users.includes(userVal)!=false){
-        alert('Este nome de utilizador já esta a ser usado')
     }else if(emailVal === '') {
 		alert("Email não pode estar em branco");
-	} else if(emails.includes(emailVal)!=false){
-		alert('Este email ja esta a ser usado por outro utilizador');
 	} else if(passwordVal === '') {
 		alert("Password não pode estar em branco");
 	} else if(conpasswordVal === '') {
