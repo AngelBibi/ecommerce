@@ -2,6 +2,9 @@
 
 body {
     background-color:  #ecbac2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 article {
@@ -29,12 +32,12 @@ center {
 h1 {
     margin: 0px;
     margin-top: 20px;
-    font-size: 120px;
+    font-size: 60px;
 }
 
 h2 {
     font-weight: bold;
-    font-size: 60px;
+    font-size: 40px;
 }
 
 * {
