@@ -5,11 +5,7 @@ const email=document.getElementById('email');
 const password2=document.getElementById('password2');
 const conpassword=document.getElementById('conpassword');
 
-const user=document.getElementById('utilizador');
-const password=document.getElementById('password');
-
 const btn_con2 = document.getElementById("btn_con2");
-const btn_con = document.getElementById("btn_con");
 
 const mnguser = document.getElementById('mngErroUser')
 const mngemail = document.getElementById('mngErroEmail')
@@ -21,42 +17,11 @@ btn_con2.addEventListener("click", (e)=>{
     check_inputs();
 });
 
-btn_con.addEventListener("click", (e)=>{
-    console.log('valor1')
-    e.preventDefault();
-    console.log('valor1')
-    check_btn();
-});
-
-
-function check_btn(){
-    console.log('valor12')
-    const user=document.getElementById('utilizador');
-    const password=document.getElementById('password');
-
-    const userVal= user.value;
-    const passwordVal= password.value;
-
-    if (userVal=== ''){
-        console.log('valor3')
-        user.innerHTML=`
-        <p>O utilizador não pode estar em branco</p>
-        `
-    }else if(passwordVal === '') {
-		password.innerHTML=`
-        <p>O utilizador não pode estar em branco</p>
-        `
-	} else {
-        alert('O Log In foi realizado com sucesso')
-		next_page()
-	}
-}
-
 function next_page() {
     window.open('index.html');
 }
 
-function check_inputs(users, emails){
+function check_inputs(){
     const user2=document.getElementById('utilizador2');
     const email=document.getElementById('email');
     const password2=document.getElementById('password2');
@@ -67,6 +32,7 @@ function check_inputs(users, emails){
     const mngpassword = document.getElementById('mngErroPassword')
     const mngpass = document.getElementById('mngErroPass')
 
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
     const userVal= user2.value;
     const emailVal= email.value;
@@ -87,7 +53,11 @@ function check_inputs(users, emails){
         <p>Email não pode estar em branco</p>
         `
 
-	} else if(passwordVal === '') {
+	}else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailVal)){
+        mngemail.innerHTML=`
+        <p>Este email não é valido</p>
+        `
+    }else if(passwordVal === '') {
 		mngpass.innerHTML=`
         <p>Password não pode estar em branco</p>
         `
