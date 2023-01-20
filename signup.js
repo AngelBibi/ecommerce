@@ -11,6 +11,11 @@ const password=document.getElementById('password');
 const btn_con2 = document.getElementById("btn_con2");
 const btn_con = document.getElementById("btn_con");
 
+const mnguser = document.getElementById('')
+const mngemail = document.getElementById('')
+const mngpassword = document.getElementById('')
+
+
 let users=[];
 let emails = []
 let passwords=[];

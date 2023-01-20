@@ -9,30 +9,21 @@
 </head>
 <body>
     <div class="container">
-    <form class="formulario" id="Criarconta">
-        <h1 class="titulo">Crie conta</h1>
-        <div class="input_div">   
-            <input type="text" id="utilizador2" class="input" autofocus placeholder="Nome de utilizador">
-            <div class="mngErroUser"></div>
-        </div>
-        <div class="input_div ">
-            <input type="text" class="input" id="email" autofocus placeholder="E-mail">
-            <div class="mngErroEmail"></div>
-        </div>
-        <div class="input_div">
-            <input type="password" class="input" id="password2" autofocus placeholder="Palavra-passe">
-            <div class="mngErroPass"></div>
-        </div>
-        <div class="input_div">
-            <input type="password" class="input" id="conpassword" autofocus placeholder="Confirmação da Palavra-passe">
-            <div class="mngErroPassword"></div>
-        </div>
-        <button class="btn_con2" id="btn_con2" type="submit">Continuar</button>
-        <p class="frm_txt">
-            <a href="signup.html" class="link" id="linkEntrar">Já tens conta? Entra com ela</a>
-        </p>
-    </form>
+        <form class="formulario" id="login">
+            <h1 class="titulo">Log In</h1>
+            <div class="input_div">
+                <input type="text" class="input" id="utilizador" autofocus placeholder="Utilizador ou e-mail">
+                <div class="mngErroUser"></div>
+            </div>
+            <div class="input_div">
+                <input type="password" class="input" id="password" autofocus placeholder="Palavra-passe">
+                <div class="mngErroPassword"></div>
+            </div>
+            <button class="btn_con" id="btn_con" type="submit">Continuar</button>
+            <p class="frm_txt">
+                <a href="signIn.html" class="link" id="criarConta">Não tens conta? Cria conta</a>
+            </p>
+        </form>
     </div>
-</body>
 <script src="signup.js"></script>
 </html>

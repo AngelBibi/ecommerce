@@ -3,24 +3,86 @@
         <title>Avaliação</title>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="avaliar.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-<body>
+<body>  
 
-<ul>
-    <li><img src="images\Biju_logo.png" class="logo"></li>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#news">Products</a></li>
-    <li><a href="#contact">About us</a></li>
-    <li style="float:right"><a href="cart.html"><img src="images\carrinho-carrinho.png" width="30" height="30"></a></li>
-</ul>
+    <ul>
+        <li><img src="images\Biju_logo.png" class="logo"></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">Products</a></li>
+        <li><a href="#contact">About us</a></li>
+        <li style="float:right"><a href="cart.html"><img src="images\carrinho-carrinho.png" width="30" height="30"></a></li>
+    </ul>
 
-    <form method="avaliacao" action="">
-        Username:<input type="text" name="username">
-        Email:<br><input type="email" name="email" required>
-        Avalie a sua experiência(0-10):<br><br>
-        Justifique a sua opinião:<br><textarea name="message" rows="10" cols="30"></textarea><br><br>
-        <input type="submit" value="Submeter">
-    </form>
+    <div id="avaliar" class="avaliar">
+        <span class="titulo">User Rating</span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <hr style="border:3px solid #f1f1f1">
+
+        <div class="row">
+        <div class="side">
+            <div>5 star</div>
+        </div>
+        <div class="middle">
+            <div class="bar-container">
+            <div class="bar-5"></div>
+            </div>
+        </div>
+        <div class="side right">
+            <div>150</div>
+        </div>
+        <div class="side">
+            <div>4 star</div>
+        </div>
+        <div class="middle">
+            <div class="bar-container">
+            <div class="bar-4"></div>
+            </div>
+        </div>
+        <div class="side right">
+            <div>63</div>
+        </div>
+        <div class="side">
+            <div>3 star</div>
+        </div>
+        <div class="middle">
+            <div class="bar-container">
+            <div class="bar-3"></div>
+            </div>
+        </div>
+        <div class="side right">
+            <div>15</div>
+        </div>
+        <div class="side">
+            <div>2 star</div>
+        </div>
+        <div class="middle">
+            <div class="bar-container">
+            <div class="bar-2"></div>
+            </div>
+        </div>
+        <div class="side right">
+            <div>6</div>
+        </div>
+        <div class="side">
+            <div>1 star</div>
+        </div>
+        <div class="middle">
+            <div class="bar-container">
+            <div class="bar-1"></div>
+            </div>
+        </div>
+        <div class="side right">
+            <div>20</div>
+        </div>
+        </div>
+    </div>
 
     <div class="footer">
         <p><img src="images\twitter (1).png" class="social-media">
