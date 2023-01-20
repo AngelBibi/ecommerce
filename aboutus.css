@@ -1,7 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
 
-.background_image img{
-    height: 100%;
+body {
+    background-color:  #ecbac2;
+}
+
+article {
+    background-color: rgb(255, 194, 208, 0.877);
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 25px 1px rgb(116, 116, 116);
+    background: rgba(255, 216, 225, 0.9);
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+article div{
+    padding: 50px;
+}
+
+article p {
+    font-size: 20px;
+}
+
+center {
+    font-size: 35px;
+}
+
+h1 {
+    margin: 0px;
+    margin-top: 20px;
+    font-size: 120px;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 60px;
 }
 
 * {
@@ -10,11 +43,6 @@
     font-family:Quicksand;
     font-size: medium;
 }
-
-body {
-    background-color:  #ecbac2;
-}
-
 ul {
     list-style-type: none;
     margin: 0;
