@@ -1,0 +1,15 @@
+Raquel
+Todas as pags estão responsivas
+Pag de detalhe de cada artigo agora é um modal
+Os detalhes de cada artigo são agora aplicados por javascript
+Carrinho agora tem mais funcionalidades, como:
+Possibilidade de fechá-lo e continuar a compra sem perder seus itens.
+O carrinho só pode aparecer se ele tiver algum item
+
+Problemas:
+Posição em que o carrinho aparece, ele vai para o fim da página, não consegui resolver.
+Não consegui resolver a seleção da cor da bijuteria
+
+
+Arquivos novos (script,js, styles.css, todosArtigos.html, artigos.js)
+Todos os artigos.html podem ser ignorados, deixei para o professor ter um comparativo.
