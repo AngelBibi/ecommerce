@@ -1,4 +1,4 @@
-Raquel
+***Raquel***
 Todas as pags estão responsivas
 Pag de detalhe de cada artigo agora é um modal
 Os detalhes de cada artigo são agora aplicados por javascript
@@ -12,4 +12,12 @@ Não consegui resolver a seleção da cor da bijuteria
 
 
 Arquivos novos (script,js, styles.css, todosArtigos.html, artigos.js)
-Todos os artigos.html podem ser ignorados, deixei para o professor ter um comparativo.
+Arquivos que podem ser ignorados:
+artigos(1-20).html
+products.html
+carrinho.html
+carrinho.js
+redirecionamento_carrinho.js
+
+
+deixei para o professor ter um comparativo.
